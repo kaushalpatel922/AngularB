@@ -21,3 +21,13 @@ myApp.controller('AppCtrl', function($scope) {
     window.alert("Hi from Angular");
   }
 });
+
+
+myApp.controller('OuterCtrl', function($scope) {
+  $scope.val1 = "The Rock";
+
+});
+
+myApp.controller('InnerCtrl', function($scope) {
+
+});
