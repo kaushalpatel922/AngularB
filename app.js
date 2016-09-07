@@ -10,3 +10,14 @@ myApp.controller('DivideCtrl', function($scope) {
     window.alert(val1/val2);
   }
 })
+
+myApp.controller('AppCtrl', function($scope) {
+  $scope.model = {
+    firstName: "Kaushal",
+    lastName: "Patel"
+  }
+
+  $scope.testFunction = function() {
+    window.alert("Hi from Angular");
+  }
+});
