@@ -6,6 +6,7 @@
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="controllers/mycontroller.js"></script>
+    <script type="text/javascript" src="controllers/carctrl.js"></script>
   </head>
   <body>
     <div ng-controller="appController">
@@ -27,23 +28,24 @@
     </div>
 
     <div ng-controller="AppCtrl">
-
       <p><input ng-model="testInput" type="text"/></p>
       {{  testInput }}
-
     </div>
 
     <div ng-controller="OuterCtrl">
-
       {{ val1}}
 
       <div ng-controller="InnerCtrl">
         {{ val1 }}
         <input type="text" ng-model='val1' />
-
       </div>
-
     </div>
 
+    <div ng-controller="carctrl">
+
+      <p> Description: {{ description }} </p>
+      <p> Cars: {{ cars }} </p>
+
+    </div>
   </body>
 </html>
