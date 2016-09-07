@@ -13,5 +13,17 @@
       <a href="#" ng-click="setName('Kaushal','Patel')">Set Name</a>
     </div>
 
+    <div ng-controller="DivideCtrl">
+      <div>
+        Enter Value 1: <input type="text" ng-model="numberData.value1"/>
+      </div>
+
+      <div>
+        Enter Value 2: <input type="text" ng-model="numberData.value2" />
+      </div>
+
+      <button ng-click="divide(numberData.value1,numberData.value2)">
+        Calculate</button>
+    </div>
   </body>
 </html>
