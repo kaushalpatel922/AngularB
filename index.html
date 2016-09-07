@@ -7,6 +7,12 @@
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="controllers/mycontroller.js"></script>
     <script type="text/javascript" src="controllers/carctrl.js"></script>
+    <style>
+     div {
+      border: 1px solid red;
+      margin: 2px;
+     }
+    </style>
   </head>
   <body>
     <div ng-controller="appController">
@@ -47,5 +53,18 @@
       <p> Cars: {{ cars }} </p>
 
     </div>
+
+    <div ng-controller="controllerA">
+      <p>{{value}}</p>
+      <p>{{sharedValue.sharedMessage}}</p>
+      <input type="text" ng-model="sharedValue.sharedMessage" />
+    </div>
+
+    <div ng-controller="controllerB">
+      <p>{{value}}</p>
+      <p>{{sharedValue.sharedMessage}}</p>
+      <input type="text" ng-model="sharedValue.sharedMessage" />
+    </div>
+
   </body>
 </html>
