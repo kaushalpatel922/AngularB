@@ -68,3 +68,14 @@ myApp.controller('BCtrl', function($scope, Share) {
   // $scope.dataObject = {color:"Green"}
   $scope.dataObject = Share.dataObject;
 })
+
+
+//creating controllers with the controller as syntax
+myApp.controller('myCtrl', function($scope) {
+  $scope.value = "Hi from myCtrl";
+
+});
+
+myApp.controller('anotherCtrl', function() {
+  this.value = "Hi from anotherCtrl";
+});

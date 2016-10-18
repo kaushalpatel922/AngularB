@@ -81,5 +81,15 @@
       <input type="text" ng-model="dataObject.color"></input>
     </div>
 
+
+    <!-- Creating Controllers with the controller as syntax -->
+    <div ng-controller="myCtrl">
+      {{value}}
+    </div>
+
+    <div ng-controller="anotherCtrl as aCtrl">
+      {{aCtrl.value}}
+    </div>
+
   </body>
 </html>
