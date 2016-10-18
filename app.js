@@ -49,3 +49,22 @@ myApp.controller('controllerB', function controllerB($scope,Share) {
   $scope.sharedValue = 'value@B';
   $scope.sharedValue = Share;
 })
+
+
+//Sharing Data between Controllers
+
+myApp.factory("Share", function () {
+  return {
+    dataObject: {color: "Blue"}
+  }
+})
+
+myApp.controller('ACtrl', function($scope, Share) {
+  // $scope.dataObject = {color: "Red"}
+  $scope.dataObject = Share.dataObject;
+})
+
+myApp.controller('BCtrl', function($scope, Share) {
+  // $scope.dataObject = {color:"Green"}
+  $scope.dataObject = Share.dataObject;
+})

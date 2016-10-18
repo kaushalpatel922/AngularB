@@ -66,5 +66,20 @@
       <input type="text" ng-model="sharedValue.sharedMessage" />
     </div>
 
+    <!--Sharing Data between Controllers  -->
+    <div ng-controller="ACtrl">
+      <h3>Controller A</h3>
+      <h3>{{dataObject}}</h3>
+      <h3>{{dataObject.color}}</h3>
+      <input type="text" ng-model="dataObject.color"></input>
+    </div>
+
+    <div ng-controller="BCtrl">
+      <h3>Controller B</h3>
+      <h3>{{dataObject}}</h3>
+      <h3>{{dataObject.color}}</h3>
+      <input type="text" ng-model="dataObject.color"></input>
+    </div>
+
   </body>
 </html>
